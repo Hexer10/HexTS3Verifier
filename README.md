@@ -34,3 +34,7 @@ This has been tested properly on CSGO & Centos 7.2
   * Start the bot: `forever start -o logs.log -e error.log app.js`
   * Two file will be created: `logs.log` where the logs will be store and `error.log` where the error logs will be store.
   * Use: `forever list` to see which processes are running under forever and `forever stop app.js` to stop the bot
+  
+## TODO
+ * Make installation script.
+ * Add translations.
