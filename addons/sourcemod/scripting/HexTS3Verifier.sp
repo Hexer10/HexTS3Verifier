@@ -2,7 +2,6 @@
 #include <sourcemod>
 #include <sdktools>
 #include <sdkhooks>
-#include <cstrike>
 
 #undef REQUIRE_PLUGIN
 #include <store>
