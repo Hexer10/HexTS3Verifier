@@ -1,5 +1,6 @@
 # HexTS3Verifier
 Verify ts3 user's identiy by logining in you ts3 server
+
 This has been tested properly on CSGO & Centos 7.2
 
 ## Prerequisites
