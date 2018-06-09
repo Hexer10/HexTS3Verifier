@@ -24,6 +24,7 @@ This has been tested properly on CSGO & Centos 7.2
 2. Install the node js app.
   * Install the dependences: `npm install cmr1-ts3-bot` and `npm install promise-mysql`.
   * Upload the `app.js` located in the `node` directory in the same folder you've ran the commands.
+  * Edit the `app.js` where is written to.
   * Start the bot: `node app.js`.
   * If you've configurate all properly the bot should now join in the ts3 server.
 
