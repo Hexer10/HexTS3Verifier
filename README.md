@@ -33,9 +33,10 @@ This has been tested properly on CSGO & Centos 7.2
 1. How to leave the bot always open?
   * Install forever: `npm install forever -g`
   * Start the bot: `forever start -o logs.log -e error.log app.js`
-  * Two file will be created: `logs.log` where the logs will be store and `error.log` where the error logs will be store.
+  * Two file will be created: `logs.log` where the logs will be stored and `error.log` where the error logs will be stored.
   * Use: `forever list` to see which processes are running under forever and `forever stop app.js` to stop the bot
   
 ## TODO
  * Make installation script.
  * Add translations.
+ * Add BOT for Discord & Telegram
