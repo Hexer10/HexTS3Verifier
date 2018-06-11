@@ -209,9 +209,11 @@ public void GenRandomCB(Database db, DBResultSet results, const char[] error, an
 	char sName[32];
 	GetClientAuthId(client, AuthId_SteamID64, sAuth, sizeof(sAuth));
 	GetClientName(client, sName, sizeof(sName));
+	char[] sNameS = new char[strlen(sName) * 2 + 1];
 	
+	g_DB.Escape(sName, sNameS, strlen(sName) * 2 + 1);
 	Format(sQuery, sizeof(sQuery), "INSERT INTO verify_ids(verification_id, player_id, player_name, verified)\
-									VALUES(%d, '%s', '%s', %d)", id, sAuth, sName, 0);									
+									VALUES(%d, '%s', '%s', %d)", id, sAuth, sNameS, 0);									
 	
 	g_DB.Query(NullQueryCB, sQuery);
 	return;
