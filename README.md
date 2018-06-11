@@ -22,7 +22,7 @@ This has been tested properly on CSGO & Centos 7.2
   * Refresh the plugins. (Change the map or restart the server).
   * Configure the plugin by editing the cfg file:  `csgo/cfg/sorcemod/plugin.HexTSBVerifier.cfg`.
 2. Install the node js app.
-  * Install the dependences: `npm install cmr1-ts3-bot` and `npm install promise-mysql`.
+  * Install the dependences: `npm install node-teamspeak-api`, `npm install cmr1-ts3-bot` and `npm install promise-mysql`.
   * Upload the `app.js` located in the `node` directory in the same folder you've ran the commands.
   * Edit the `app.js` where is written to.
   * Start the bot: `node app.js`.
