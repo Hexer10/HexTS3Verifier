@@ -78,14 +78,14 @@ bot.clientCommand('!id', (args, context) => {
                 //Check if input is number
             } else if (!isNaN(args[1])) {
 
-                const info = JSON.parse(JSON.stringify(resp));
+                const info = resp;
 
                 // noinspection JSUnusedAssignment
                 let stmt = "SELECT * FROM verify_ids WHERE ts3_id = " + info['client_database_id'] + " AND verified = 2";
                 con.query(stmt).then(function (rows) {
 
                     //Or I could just check for the verified group...
-                    let result = JSON.parse(JSON.stringify(rows));
+                    let result = rows;
 
                     //Client has already verified one code
                     if (result.length === 1) {
@@ -96,7 +96,7 @@ bot.clientCommand('!id', (args, context) => {
                     } else {
                         stmt = "SELECT * FROM verify_ids WHERE verification_id = " + args[1];
                         con.query(stmt).then(function (rows) {
-                            result = JSON.parse(JSON.stringify(rows));
+                            result = rows;
                             if (result.length === 1) {
                                 //Client verified successfully
                                 if (result[0]['verified'] === 0) {
@@ -117,7 +117,7 @@ bot.clientCommand('!id', (args, context) => {
                                 } else if (result[0]['verified'] === 1) {
                                     stmt = "SELECT * FROM verify_ids WHERE ts3_id = " + info['client_database_id'] + " AND verification_id = " + args[1];
                                     con.query(stmt).then(function (rows) {
-                                        result = JSON.parse(JSON.stringify(rows));
+                                        result = rows;
                                         if (result.length === 1) {
                                             context.client.message("To gain your money join in our csgo server and type !verify again!");
                                         } else {
